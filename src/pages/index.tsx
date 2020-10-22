@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { IoLogoNodejs, IoMdGitPullRequest, IoMdRocket } from 'react-icons/io';
 
 import Hero from '../components/Hero';
@@ -17,6 +17,12 @@ import leafsIllustrationBack from '../images/illustrations/leafs-back.svg';
 import dotsIllustration from '../images/illustrations/dots.svg';
 import InstallTabs from '../components/InstallTabs';
 import GetStartedSection from '../components/GetStartedSection';
+
+import expressLogo from '../images/logos/express-logo.png';
+import electronLogo from '../images/logos/electron-logo.svg';
+import eslintLogo from '../images/logos/eslint-logo.svg';
+import webTorrentLogo from '../images/logos/web-torrent-logo.png';
+import standardjsLogo from '../images/logos/standard-logo.svg';
 
 interface NodeFeatureProps {
   icon?: ReactElement;
@@ -73,6 +79,7 @@ export default function Index({
         beginnerGuideBodyText,
         doMoreWithNodeHeaderText,
         doMoreWithNodeBodyText,
+        logoSectionText,
       },
     },
   },
@@ -122,6 +129,29 @@ export default function Index({
           doMoreWithNodeHeaderText={doMoreWithNodeHeaderText}
           doMoreWithNodeBodyText={doMoreWithNodeBodyText}
         />
+        <section className="trusted-by">
+          <h4 className="t-headline">
+            {/* Trusted by development teams around the world */}
+            {logoSectionText}
+          </h4>
+          <div className="logos-container">
+            <img src={expressLogo} alt="Express logo" width="20%" />
+            <img src={electronLogo} alt="Electron logo" width="20%" />
+            <img src={eslintLogo} alt="esLint Logo" />
+            <img src={webTorrentLogo} alt="WebTorrent Logo" width="20%" />
+            <img
+              src={standardjsLogo}
+              alt="Standard - JavaScript Style Guide"
+              width="20%"
+            />
+          </div>
+        </section>
+
+        <div className="download-lts-container">
+          <Link to="/learn" className="circular-container">
+            {learnLinkText}
+          </Link>
+        </div>
       </main>
     </Layout>
   );
@@ -150,6 +180,7 @@ export const query = graphql`
         nodeFeature2
         nodeFeature3
         nodeFeatureAltText
+        logoSectionText
       }
     }
   }

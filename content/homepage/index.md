@@ -22,4 +22,5 @@ beginnerGuideHeaderText: A beginner's guide
 beginnerGuideBodyText: Development teams around th world - including ABC Company, ABC Company, ABC Company, ABC Company
 doMoreWithNodeHeaderText: Do even more with Node.js
 doMoreWithNodeBodyText: Development teams around th world - including ABC Company, ABC Company, ABC Company, ABC Company
+logoSectionText: Trusted by development teams around the world
 ---
