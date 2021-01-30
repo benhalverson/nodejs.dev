@@ -63,6 +63,16 @@ const Header = ({
                 Download
               </Link>
             </li>
+            <li className="nav__tabs">
+              <a
+                href="https://nodejs.org/en/get-involved/"
+                className="activeStyleTab"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Community
+              </a>
+            </li>
           </ul>
         </div>
 
