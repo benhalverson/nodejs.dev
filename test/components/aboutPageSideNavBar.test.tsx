@@ -1,5 +1,6 @@
 import React from 'react';
-import { screen, render, fireEvent } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import AboutPageSideNavBar, {
   AboutPageKeys,
   OverflowTypes,
@@ -33,7 +34,7 @@ describe('AboutPageSideNavBar', () => {
     render(<AboutPageSideNavBar pageKey={AboutPageKeys.releases} />);
     const downloadItem: Element = screen.getAllByRole('button')[0] as Element;
     expect(document.body.style.overflow).toBe(OverflowTypes.unset);
-    fireEvent.click(downloadItem);
+    userEvent.click(downloadItem);
     expect(document.body.style.overflow).toBe(OverflowTypes.hidden);
   });
 
@@ -41,13 +42,13 @@ describe('AboutPageSideNavBar', () => {
     render(<AboutPageSideNavBar pageKey={AboutPageKeys.releases} />);
     const downloadItem: Element = screen.getAllByRole('button')[0] as Element;
     expect(document.body.style.overflow).toBe(OverflowTypes.unset);
-    fireEvent.click(downloadItem);
+    userEvent.click(downloadItem);
     expect(document.body.style.overflow).toBe(OverflowTypes.hidden);
-    fireEvent.click(downloadItem);
+    userEvent.click(downloadItem);
     expect(document.body.style.overflow).toBe(OverflowTypes.unset);
-    fireEvent.click(downloadItem);
+    userEvent.click(downloadItem);
     expect(document.body.style.overflow).toBe(OverflowTypes.hidden);
-    fireEvent.click(downloadItem);
+    userEvent.click(downloadItem);
     expect(document.body.style.overflow).toBe(OverflowTypes.unset);
   });
 });
