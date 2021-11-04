@@ -57,7 +57,7 @@
     "react-loader-spinner": "^4.0.0",
     "react-lunr": "^1.1.0",
     "react-spinners": "^0.11.0",
-    "react-tabs": "3.2.2",
+    "react-tabs": "3.2.3",
     "react-use-flexsearch": "^0.1.1",
     "throttle-debounce": "^3.0.1",
     "typescript": "4.4.4"
