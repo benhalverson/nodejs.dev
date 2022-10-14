@@ -45,8 +45,8 @@ const BlogCard = ({
       <p>
         {intl.formatMessage({ id: 'blog.authors.list.title.by' })}{' '}
         {blogAuthors?.map((author, i) => (
-          <Fragment key={author.name}>
-            <span>{author.name}</span>
+          <Fragment key={author?.name}>
+            <span>{author?.name}</span>
             {getTerminatingString(
               i,
               blogAuthors.length,

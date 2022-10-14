@@ -30,7 +30,7 @@ const Codebox = ({ children: { props } }: Props): JSX.Element => {
   const [parsedCode, setParsedCode] = useState('');
 
   // eslint-disable-next-line react/prop-types
-  const className = props.className || 'text';
+  const className = props?.className || 'text';
 
   // Language Matches in class
   const matches = className.match(/language-(?<lang>.*)/);
@@ -39,7 +39,7 @@ const Codebox = ({ children: { props } }: Props): JSX.Element => {
   const language = matches?.groups?.lang || 'text';
 
   // Actual Code into a stringified format
-  const stringCode = props.children?.toString() || '';
+  const stringCode = props?.children?.toString() || '';
 
   const handleCopyCode = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
