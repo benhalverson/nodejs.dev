@@ -42,7 +42,7 @@ jobs:
         run: npm run build-ci
 
       - name: Commit API changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: 'chore(api): sync auto-generated docs'
           branch: 'main'
